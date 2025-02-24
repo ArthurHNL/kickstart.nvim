@@ -460,7 +460,7 @@ require('lazy').setup({
         --
         omnisharp = {},
         fsautocomplete = {},
-
+        sqls = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
