@@ -1,11 +1,23 @@
 -- Adds git related signs to the gutter, as well as utilities for managing changes
--- NOTE: gitsigns is already included in init.lua but contains only the base
--- config. This will add also the recommended keymaps.
 
 return {
   {
     'lewis6991/gitsigns.nvim',
     opts = {
+      signs = {
+        add = { text = vim.g.have_nerd_font and '󰜅' or '+' },
+        change = { text = vim.g.have_nerd_font and '󰲶' or '~' },
+        delete = { text = vim.g.have_nerd_font and '' or '-' },
+        topdelete = { text = vim.g.have_nerd_font and '󰺝' or '‾' },
+        changedelete = { text = vim.g.have_nerd_font and '󰧧' or '~' },
+      },
+      signs_staged = {
+        add = { text = vim.g.have_nerd_font and '󱇬' or '+' },
+        change = { text = vim.g.have_nerd_font and '󰏫' or '~' },
+        delete = { text = vim.g.have_nerd_font and '󰙂' or '-' },
+        topdelete = { text = vim.g.have_nerd_font and '󰛌' or '‾' },
+        changedelete = { text = vim.g.have_nerd_font and '󰆴' or '~' },
+      },
       on_attach = function(bufnr)
         local gitsigns = require 'gitsigns'
 
